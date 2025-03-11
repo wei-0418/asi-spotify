@@ -6,13 +6,14 @@ from transformers import pipeline
 import numpy as np
 from sklearn.cluster import KMeans
 import uvicorn
-
+import os
+REDIRECT_URI = os.getenv("REDIRECT_URI", "http://localhost:8888/callback")
 app = FastAPI()
 
 # Spotify 憑證（使用你提供的）
 CLIENT_ID = "cac8d76e0ecf4c8cb24bda595e5a539b"
 CLIENT_SECRET = "1247fc65794040fc80653c51b2657f66"
-REDIRECT_URI = "http://localhost:8888/callback"
+REDIRECT_URI = "https://asi-spotify-production.up.railway.app/callback"
 SCOPE = "user-library-read user-read-recently-played playlist-modify-public playlist-read-collaborative"
 
 # Spotify 認證
