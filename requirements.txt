@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+spotipy
+transformers
+torch
+scikit-learn
+numpy
